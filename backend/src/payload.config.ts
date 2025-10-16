@@ -22,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  serverURL: "http://localhost:3001",
+  serverURL: "https://eng-techno-t-production.up.railway.app",
   collections: [Podcasts, Media, Audios, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
