@@ -1,0 +1,35 @@
+.header{
+	padding: 2em var(--podcast-main-panels-horizontal-padding);
+	max-height: 104px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: relative;
+	background: var(--bg-white-1);
+	border: 1px solid var(--bg-white-3);
+
+	span{
+	  text-wrap: nowrap;
+	}
+
+	.brand-warpper{
+		display: flex;
+		align-items: center;
+		gap: 2em;
+
+		img{
+			position: static !important;
+			min-width: 150px !important;
+			height: auto !important;
+		}
+
+		.vertical-line{
+			height: 24px;
+			width: 1px;
+			border-left: 1px solid var(--bg-calm-white);
+		}
+	}
+	
+}

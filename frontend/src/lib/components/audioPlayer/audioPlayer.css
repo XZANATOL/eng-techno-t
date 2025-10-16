@@ -1,0 +1,147 @@
+.audioPlayer{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	span,p,h5{
+		color: #fff !important;
+		text-align: center;
+	}
+	h5{
+		margin-bottom: 6px;
+	}
+
+	.image-wrapper{
+		width: 100%;
+		height: 346px;
+		border-radius: 24px;
+		border: 1.5px dashed var(--bg-green-light);
+
+		position: relative;
+		overflow: hidden;
+		background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(145, 100, 250, 0) 100%);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-bottom: 2em;
+	}
+
+	.progress-bar-wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		margin-bottom: 40px;
+
+		input[type=range],
+		input[type=range]::-ms-track { /* Microsoft (Edge, IE) */
+			-webkit-appearance: none;
+			appearance: none;
+			width: 100%;
+			height: 4px;
+			background: transparent; /* Hide the default track */
+			border-color: transparent;
+			color: transparent;
+		}
+
+		/* 2. Style the TRACK (the line) */
+
+		/* Webkit (Chrome, Safari, Opera) */
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 8px;
+		  background: var(--bg-green-light);
+		  border-radius: 10px;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: linear-gradient(to right, #007bff var(--range-progress), #ccc var(--range-progress));
+		}
+		/* Mozilla (Firefox) */
+		input[type=range]::-moz-range-progress { /* Color of the filled part */
+		  background-color: var(--bg-green);
+		  height: 8px;
+		  border-radius: 4px;
+		}
+		input[type=range]::-moz-range-track { /* Color of the whole track */
+		  width: 100%;
+		  height: 8px;
+		  background: var(--bg-green-light);
+		  border-radius: 10px;
+		}
+		/* Microsoft (Edge, IE) */
+		input[type=range]::-ms-fill-lower { /* Color of the filled part */
+		    background: var(--bg-green);
+		    border-radius: 10px;
+		}
+		input[type=range]::-ms-fill-upper { /* Color of the non-filled part */
+		    background: var(--bg-green-light);
+		    border-radius: 10px;
+		}
+
+		/* 3. Style the THUMB (the knob) */
+		input[type=range]::-webkit-slider-thumb, /* Webkit (Chrome, Safari, Opera) */
+		input[type=range]::-moz-range-thumb, /* Mozilla (Firefox) */
+		input[type=range]::-ms-thumb { /* Microsoft (Edge, IE) */
+			-webkit-appearance: none;
+			appearance: none;
+			margin-top: -8px; /* Adjust vertical position to center on the track */
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			background: var(--bg-white-1);
+			border: 5px solid var(--bg-green);
+			cursor: pointer;
+		}
+	}
+
+	.controls-wapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 24px;
+
+		svg{
+			fill: currentColor;
+			color: white;
+			width: 24px;
+			height: 24px;
+		}
+
+		.play-wrapper{
+			width: 64px;
+			height: 64px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: var(--bg-purple-dark);
+			border-radius: 16px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 992px){
+	.audioPlayer{
+		.image-wrapper{
+			width: 100%;
+			min-height: 150px;
+			height: 100%;
+
+			margin-bottom: 1em;
+		}
+
+		.progress-bar-wrapper{
+			input[type=range]::-webkit-slider-thumb,
+			input[type=range]::-ms-thumb{
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		
+	}	
+}

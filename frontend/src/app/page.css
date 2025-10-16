@@ -1,0 +1,23 @@
+.player-section-wrapper{
+  background: var(--bg-purple);
+  padding: 36px var(--podcast-main-panels-horizontal-padding);
+  padding-bottom: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-wrapper{
+    position: static !important;
+    width: auto !important;
+    height: 32px !important;
+    min-height: 32px !important;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .player-section-wrapper{
+    padding-bottom: 24px;
+  }
+}

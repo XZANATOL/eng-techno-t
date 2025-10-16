@@ -1,0 +1,37 @@
+.release-box-wrapper{
+	min-height: 136px;
+	padding: 20px;
+	width: 100%;
+
+	background: var(--bg-white-1);
+	border-radius: 24px;
+
+	.podcast-img-wrapper{
+		position: relative;
+		min-width: 96px;
+		min-height: 96px;
+		width: 96px;
+		height: 96px;
+
+		img{
+			border-radius: 16px;
+		}
+	}
+
+	h5,p{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
+	}
+
+	h5{
+		margin-bottom: 16px;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	p{
+		margin-bottom: 0px;
+	}
+}

@@ -1,0 +1,57 @@
+:root {
+  --bg-white-1: #ffffff;
+  --bg-white-2: #F7F8F8;
+  --bg-white-3: #E6E8EB;
+  --bg-purple: #8257E5;
+  --bg-purple-dark: #6F48C9;
+  --bg-green: #04D361;
+  --bg-green-light: #9F75FF;
+
+  --text-body-1: #494D4B;
+  --text-body-2: #ABA8B2;
+  --text-body-3: #FFFFFF;
+  --text-body-4: #808080;
+
+  /* 6% is 4em equivalent but more dynamic for responsive design */
+  --podcast-main-panels-horizontal-padding: 6%;
+}
+
+html,
+body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-white-2) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,a{
+  font-family: var(--lexend-font);
+  color: black;
+}
+
+p,span,a{
+  font-family: var(--inter-font);
+}
+
+span{
+  color: var(--text-body-4);
+  font-weight: 300;
+  font-size: 14px;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "type": "module",
+  "scripts": {
+    "build": "next build && tsc --project tsconfig.server.json",
+    "dev": "nodemon",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_ENV=production node dist/server.js"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.59.1",
+    "@payloadcms/next": "3.59.1",
+    "@payloadcms/payload-cloud": "3.59.1",
+    "@payloadcms/richtext-lexical": "3.59.1",
+    "@payloadcms/storage-vercel-blob": "^3.59.1",
+    "cross-env": "^7.0.3",
+    "express": "^4.21.1",
+    "graphql": "^16.8.1",
+    "next": "15.2.3",
+    "payload": "3.59.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^18.11.5",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
